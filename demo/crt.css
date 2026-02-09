@@ -1,0 +1,123 @@
+/* Camada base -------------------------------------------------- */
+.screen {
+    position: fixed;
+    inset: 0;
+    border-radius: 0;
+
+    pointer-events: none;
+
+    /* Vinheta */
+    box-shadow:
+        inset 0 0 80px rgba(0,0,0,1),
+        inset 0 0 140px rgba(0,0,0,.8);
+
+    animation: crtFlicker 3.5s linear infinite;
+}
+
+
+/* Scanlines ------------------------------------------------------ */
+.screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+    pointer-events: none;
+
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,.18) 0px,
+        rgba(0,0,0,.18) 2px,
+        rgba(0,0,0,.02) 2px,
+        rgba(0,0,0,.02) 4px
+    );
+
+    mix-blend-mode: multiply;
+    opacity: .9;
+}
+
+
+/* Vidro curvo ---------------------------------------------------- */
+.screen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    z-index: 3;
+    pointer-events: none;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255,255,255,.13) 0%,
+        rgba(255,255,255,.06) 30%,
+        rgba(0,0,0,.55) 90%,
+        rgba(0,0,0,.92) 100%
+    );
+}
+
+
+/* Feixe de Varredura --------------------------------------------- */
+.screen .beam {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 140px;
+
+    z-index: 1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(255,255,255,.05) 40%,
+        rgba(255,255,255,.18) 50%,
+        rgba(255,255,255,.05) 60%,
+        transparent 100%
+    );
+
+    filter: blur(6px);
+    opacity: .8;
+
+    animation: beamDrop 8.5s cubic-bezier(.25,.1,.25,1) infinite;
+}
+
+
+/* Animações ------------------------------------------------------- */
+@keyframes beamDrop {
+
+    /* fora da tela */
+    0% {
+        top: -160px;
+        opacity: 0;
+    }
+
+    /* entrada rápida */
+    15% {
+        opacity: .7;
+    }
+
+    /* centro */
+    48% {
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: .9;
+    }
+
+    /* linger */
+    58% {
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+
+    /* apagar */
+    70% {
+        opacity: 0;
+    }
+
+    /* saída */
+    100% {
+        top: 55%;
+        opacity: 0;
+    }
+}
