@@ -1,123 +1,262 @@
-/* Camada base -------------------------------------------------- */
+/* BASE ================================================= */
+:root{
+--crt-intensity: 1;
+
+--crt-flicker-speed: 3.5s;
+
+--crt-warp-x: 1.0015;
+--crt-warp-y: 0.9985;
+--crt-warp-speed: 6s;
+
+--crt-breath-brightness: 1.04;
+--crt-breath-speed: 8s;
+
+--crt-scanline-dark: .18;
+--crt-scanline-light: .02;
+--crt-scanline-opacity: .9;
+--crt-scanline-size: 2px;
+
+--crt-beam-height: 140px;
+--crt-beam-blur: 6px;
+--crt-beam-speed: 9.5s;
+--crt-beam-opacity: .6;
+
+--crt-ghost-opacity: .04;
+--crt-ghost-blur: 2px;
+
+--crt-overscan: -3px;
+}
+
+/* PRESETS ============================================== */
+
+/* OFFICE 98 */
+body.crt-office98{
+    background:#e9ecef;
+    color:#111;
+    text-shadow:
+    0.4px 0 rgba(255,0,0,.18),
+    -0.4px 0 rgba(0,120,255,.18);
+
+    --crt-scanline-dark:.06;
+    --crt-scanline-light:.02;
+    --crt-scanline-opacity:.45;
+
+    --crt-ghost-opacity:.015;
+    --crt-ghost-blur:1px;
+
+    --crt-breath-brightness:1.02;
+
+    --crt-warp-x:1.0025;
+    --crt-warp-y:0.9975;
+}
+body.crt-office98 ::selection{
+    background:#0a246a;
+    color:#fff;
+}
+
+/* GREEN TERMINAL */
+body.crt-green{
+    background:#001400;
+    color:#6CFF6C;
+    text-shadow:0 0 6px rgba(108,255,108,.5);
+
+    --crt-scanline-dark:.28;
+    --crt-scanline-light:.04;
+    --crt-scanline-opacity:1;
+
+    --crt-breath-brightness:1.08;
+    --crt-flicker-speed:2.8s;
+
+    --crt-ghost-opacity:.08;
+    --crt-ghost-blur:3px;
+}
+body.crt-green ::selection{
+    background:rgba(108,255,108,.25);
+    color:#eaffea;
+}
+
+/* AMBER */
+body.crt-amber{
+    background:#140d00;
+    color:#ffb000;
+
+    text-shadow:
+        0 0 3px rgba(255,176,0,.6),
+        0 0 8px rgba(255,176,0,.35),
+        0 0 14px rgba(255,176,0,.15);
+
+    --crt-scanline-dark:.26;
+    --crt-scanline-light:.05;
+    --crt-scanline-opacity:1;
+
+    --crt-ghost-opacity:.10;
+    --crt-ghost-blur:3px;
+
+    --crt-breath-brightness:1.07;
+    --crt-flicker-speed:3s;
+}
+body.crt-amber ::selection{
+    background:rgba(255,176,0,.25);
+    color:#fff2cc;
+}
+
+/* PVM */
+body.crt-pvm{
+    background:#040404;
+    color:#f2f6ff;
+
+    --crt-scanline-dark:.32;
+    --crt-scanline-light:.04;
+    --crt-scanline-size:2px;
+    --crt-scanline-opacity:.75;
+
+    --crt-ghost-opacity:.015;
+    --crt-ghost-blur:.6px;
+
+    --crt-warp-x:1.0002;
+    --crt-warp-y:0.9998;
+
+    --crt-breath-brightness:1.002;
+    --crt-flicker-speed:14s;
+}
+body.crt-pvm ::selection{
+    background:#f2f6ff;
+    color:#040404;
+}
+
+/* CAMADAS CRT ========================================== */
+
+body::after{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background:inherit;
+opacity: var(--crt-ghost-opacity);
+filter: blur(var(--crt-ghost-blur));
+z-index:2;
+}
+
 .screen {
-    position: fixed;
-    inset: 0;
-    border-radius: 0;
+position: fixed;
+inset: var(--crt-overscan);
+pointer-events: none;
+z-index:3;
 
-    pointer-events: none;
+box-shadow:
+    inset 0 0 80px rgba(0,0,0,1),
+    inset 0 0 140px rgba(0,0,0,.8);
 
-    /* Vinheta */
-    box-shadow:
-        inset 0 0 80px rgba(0,0,0,1),
-        inset 0 0 140px rgba(0,0,0,.8);
-
-    animation: crtFlicker 3.5s linear infinite;
+animation:
+crtFlicker var(--crt-flicker-speed) linear infinite,
+crtWarp var(--crt-warp-speed) ease-in-out infinite,
+crtBreath var(--crt-breath-speed) ease-in-out infinite;
 }
 
-
-/* Scanlines ------------------------------------------------------ */
+/* Scanlines */
 .screen::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+content: "";
+position: absolute;
+inset: 0;
+pointer-events: none;
+z-index: 4;
 
-    z-index: 2;
-    pointer-events: none;
+background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,var(--crt-scanline-dark)) 0px,
+    rgba(0,0,0,var(--crt-scanline-dark)) var(--crt-scanline-size),
+    rgba(0,0,0,var(--crt-scanline-light)) var(--crt-scanline-size),
+    rgba(0,0,0,var(--crt-scanline-light)) calc(var(--crt-scanline-size) * 2)
+);
 
-    background: repeating-linear-gradient(
-        to bottom,
-        rgba(0,0,0,.18) 0px,
-        rgba(0,0,0,.18) 2px,
-        rgba(0,0,0,.02) 2px,
-        rgba(0,0,0,.02) 4px
-    );
-
-    mix-blend-mode: multiply;
-    opacity: .9;
+opacity: var(--crt-scanline-opacity);
+mix-blend-mode: multiply;
 }
 
-
-/* Vidro curvo ---------------------------------------------------- */
+/* Vidro */
 .screen::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+content: "";
+position: absolute;
+inset: 0;
+pointer-events: none;
+z-index: 5;
 
-    z-index: 3;
-    pointer-events: none;
-
-    background: radial-gradient(
-        ellipse at center,
-        rgba(255,255,255,.13) 0%,
-        rgba(255,255,255,.06) 30%,
-        rgba(0,0,0,.55) 90%,
-        rgba(0,0,0,.92) 100%
-    );
+background: radial-gradient(
+    ellipse at center,
+    rgba(255,255,255,.13) 0%,
+    rgba(255,255,255,.06) 30%,
+    rgba(0,0,0,.55) 90%,
+    rgba(0,0,0,.92) 100%
+);
 }
 
-
-/* Feixe de Varredura --------------------------------------------- */
+/* Feixe */
 .screen .beam {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 140px;
+position: absolute;
+left: 0;
+width: 100%;
+z-index: 3;
+pointer-events: none;
 
-    z-index: 1;
-    pointer-events: none;
+background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255,255,255,.05) 40%,
+    rgba(255,255,255,.18) 50%,
+    rgba(255,255,255,.05) 60%,
+    transparent 100%
+);
 
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(255,255,255,.05) 40%,
-        rgba(255,255,255,.18) 50%,
-        rgba(255,255,255,.05) 60%,
-        transparent 100%
-    );
-
-    filter: blur(6px);
-    opacity: .8;
-
-    animation: beamDrop 8.5s cubic-bezier(.25,.1,.25,1) infinite;
+height: var(--crt-beam-height);
+filter: blur(var(--crt-beam-blur));
+opacity: var(--crt-beam-opacity);
+animation: beamDrop var(--crt-beam-speed) cubic-bezier(.25,.1,.25,1) infinite;
 }
 
+/* ANIMAÇÕES ============================================ */
 
-/* Animações ------------------------------------------------------- */
+@keyframes crtFlicker {
+0%  { opacity: 1; }
+96% { opacity: 1; }
+97% { opacity: .94; }
+98% { opacity: 1; }
+99% { opacity: .98; }
+100%{ opacity: 1; }
+}
+
+@keyframes crtWarp {
+0% { transform: scale(1,1); }
+50% { transform: scale(var(--crt-warp-x), var(--crt-warp-y)); }
+100% { transform: scale(1,1); }
+}
+
+@keyframes crtBreath{
+0%,100%{ filter: brightness(1); }
+50%{ filter: brightness(var(--crt-breath-brightness)); }
+}
+
 @keyframes beamDrop {
 
-    /* fora da tela */
-    0% {
-        top: -160px;
-        opacity: 0;
-    }
+0% { top: -160px; opacity: 0; }
 
-    /* entrada rápida */
-    15% {
-        opacity: .7;
-    }
+15% { opacity: .6; }
 
-    /* centro */
-    48% {
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: .9;
-    }
+48% {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .4;
+}
 
-    /* linger */
-    58% {
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: 1;
-    }
+58% {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
 
-    /* apagar */
-    70% {
-        opacity: 0;
-    }
+70% { opacity: 0; }
 
-    /* saída */
-    100% {
-        top: 55%;
-        opacity: 0;
-    }
+100% {
+    top: 55%;
+    opacity: 0;
+}
 }
