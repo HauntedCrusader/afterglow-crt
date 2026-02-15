@@ -10,9 +10,10 @@ No WebGL.
 
 Just the browser rendering engine pushed to its limits.
 
----
+
 <details>
 <summary>Ver em Português</summary>
+---
 
 ### Uma Simulação de Monitor CRT em CSS Puro
 
@@ -24,8 +25,9 @@ Sem WebGL.
 
 Apenas o mecanismo de renderização do navegador levado ao seu limite.
 
----
+
 </details>
+---
 
 ## Preview
 
@@ -40,10 +42,11 @@ Afterglow can be used to simulate different types of real screens:
 
 The project is designed both as a **retro aesthetic library** and a **study of analog video artifacts**.
 
----
+
 <details>
 <summary>Ver em Português</summary>
-  
+---
+
 O Afterglow pode ser usado para simular diferentes tipos de telas reais:
 
 * Gabinetes de fliperama
@@ -55,8 +58,9 @@ O Afterglow pode ser usado para simular diferentes tipos de telas reais:
 
 O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto como um **estudo de artefatos de vídeo analógico**.
 
----
+
 </details>
+---
 
 ## Themes Included
 
@@ -71,10 +75,11 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 | Green  | Inspired by monochrome phosphor computer terminals.             |
 | Amber  | Modeled after amber monochrome monitors from the 80s and early 90s.             |
 
----
+
 <details>
 <summary>Ver em Português</summary>
-  
+---
+
 | Tema   | Descrição                              |
 | ------- | ---------------------------------------- |
 | Escritório98  | Monitor de PC do início dos anos 2000.              |
@@ -82,8 +87,9 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 | Verde  | Inspirado em terminais de computador monocromáticos com fósforo.             |
 | Âmbar  | Inspirado em monitores monocromáticos âmbar dos anos 80 e início dos anos 90.             |
 
----
+
 </details>
+---
 
 ## Installation
 
@@ -101,10 +107,11 @@ index.html
 
 That's it. No build step, no dependencies (for now).
 
----
+
 <details>
 <summary>Ver em Português</summary>
-  
+---
+
 Clone o repositório:
 
 ```bash
@@ -119,8 +126,9 @@ index.html
 
 Pronto. Sem etapa de compilação, sem dependências (por enquanto).
 
----
+
 </details>
+---
 
 ## How It Works
 
@@ -135,9 +143,10 @@ Afterglow relies on a combination of:
 
 The goal is to mimic how an **electron beam scans phosphor lines** inside a real CRT display.
 
----
+
 <details>
 <summary>Ver em Português</summary>
+---
 
 O Afterglow utiliza uma combinação de:
 
@@ -150,8 +159,9 @@ O Afterglow utiliza uma combinação de:
 
 O objetivo é simular como um **feixe de elétrons varre as linhas de fósforo** dentro de um monitor CRT real.
   
----
+
 </details>
+---
 
 ## Customization
 
@@ -187,9 +197,10 @@ body.my-monitor{
 }
 ```
 
----
+
 <details>
 <summary>Ver em Português</summary>
+---
 
 Cada predefinição é controlada por variáveis CSS:
 
@@ -227,8 +238,9 @@ body.meu-monitor{
 }
 ```
 
----
+
 </details>
+---
 
 ## Credits
 
@@ -237,17 +249,19 @@ Created by **@HauntedCrusader**
 Font used: IBM Plex Mono
 Inspired by analog video technology and retro hardware preservation communities.
 
----
+
 <details>
 <summary>Ver em Português</summary>
+---
 
 Criado por **@HauntedCrusader**
 
 Fonte utilizada: IBM Plex Mono
 Inspirado na tecnologia de vídeo analógica e nas comunidades de preservação de hardware retrô.
 
----
+
 </details>
+---
 
 MIT License
 
