@@ -13,7 +13,6 @@ Just the browser rendering engine pushed to its limits.
 
 <details>
 <summary>Ver em Português</summary>
----
 
 ### Uma Simulação de Monitor CRT em CSS Puro
 
@@ -27,6 +26,7 @@ Apenas o mecanismo de renderização do navegador levado ao seu limite.
 
 
 </details>
+
 ---
 
 ## Preview
@@ -45,7 +45,6 @@ The project is designed both as a **retro aesthetic library** and a **study of a
 
 <details>
 <summary>Ver em Português</summary>
----
 
 O Afterglow pode ser usado para simular diferentes tipos de telas reais:
 
@@ -60,6 +59,7 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 
 
 </details>
+
 ---
 
 ## Themes Included
@@ -78,7 +78,6 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 
 <details>
 <summary>Ver em Português</summary>
----
 
 | Tema   | Descrição                              |
 | ------- | ---------------------------------------- |
@@ -89,6 +88,7 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 
 
 </details>
+
 ---
 
 ## Installation
@@ -110,7 +110,6 @@ That's it. No build step, no dependencies (for now).
 
 <details>
 <summary>Ver em Português</summary>
----
 
 Clone o repositório:
 
@@ -128,6 +127,7 @@ Pronto. Sem etapa de compilação, sem dependências (por enquanto).
 
 
 </details>
+
 ---
 
 ## How It Works
@@ -146,7 +146,6 @@ The goal is to mimic how an **electron beam scans phosphor lines** inside a real
 
 <details>
 <summary>Ver em Português</summary>
----
 
 O Afterglow utiliza uma combinação de:
 
@@ -161,6 +160,7 @@ O objetivo é simular como um **feixe de elétrons varre as linhas de fósforo**
   
 
 </details>
+
 ---
 
 ## Customization
@@ -200,7 +200,6 @@ body.my-monitor{
 
 <details>
 <summary>Ver em Português</summary>
----
 
 Cada predefinição é controlada por variáveis CSS:
 
@@ -240,6 +239,7 @@ body.meu-monitor{
 
 
 </details>
+
 ---
 
 ## Credits
@@ -252,7 +252,6 @@ Inspired by analog video technology and retro hardware preservation communities.
 
 <details>
 <summary>Ver em Português</summary>
----
 
 Criado por **@HauntedCrusader**
 
@@ -261,6 +260,7 @@ Inspirado na tecnologia de vídeo analógica e nas comunidades de preservação 
 
 
 </details>
+
 ---
 
 MIT License
