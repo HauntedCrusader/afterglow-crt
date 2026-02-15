@@ -70,10 +70,10 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 
 | Theme   | Description                              |
 | ------- | ---------------------------------------- |
-| Office98  | Early 2000s PC monitor             |
-| PVM     | Clean professional broadcast monitor     |
-| Green  | Inspired by monochrome phosphor computer terminals.             |
-| Amber  | Modeled after amber monochrome monitors from the 80s and early 90s.             |
+| crt-office98  | Early 2000s PC monitor             |
+| crt-pvm    | Clean professional broadcast monitor     |
+| crt-green  | Inspired by monochrome phosphor computer terminals.             |
+| crt-amber  | Modeled after amber monochrome monitors from the 80s and early 90s.             |
 
 
 <details>
@@ -81,10 +81,10 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 
 | Tema   | Descrição                              |
 | ------- | ---------------------------------------- |
-| Escritório98  | Monitor de PC do início dos anos 2000.              |
-| PVM     | Monitor profissional de transmissão com design limpo.     |
-| Verde  | Inspirado em terminais de computador monocromáticos com fósforo.             |
-| Âmbar  | Inspirado em monitores monocromáticos âmbar dos anos 80 e início dos anos 90.             |
+| crt-office98  | Monitor de PC do início dos anos 2000.              |
+| crt-pvm    | Monitor profissional de transmissão com design limpo.     |
+| crt-green  | Inspirado em terminais de computador monocromáticos com fósforo.             |
+| crt-amber  | Inspirado em monitores monocromáticos âmbar dos anos 80 e início dos anos 90.             |
 
 
 </details>
@@ -262,6 +262,8 @@ Inspirado na tecnologia de vídeo analógica e nas comunidades de preservação 
 </details>
 
 ---
+
+## License
 
 MIT License
 

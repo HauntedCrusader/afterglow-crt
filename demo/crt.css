@@ -1,28 +1,28 @@
 /* BASE ================================================= */
 :root{
---crt-flicker-speed: 3.5s;
+    --crt-flicker-speed: 3.5s;
 
---crt-warp-x: 1.0015;
---crt-warp-y: 0.9985;
---crt-warp-speed: 6s;
+    --crt-warp-x: 1.0015;
+    --crt-warp-y: 0.9985;
+    --crt-warp-speed: 6s;
 
---crt-breath-brightness: 1.04;
---crt-breath-speed: 8s;
+    --crt-breath-brightness: 1.04;
+    --crt-breath-speed: 8s;
 
---crt-scanline-dark: .18;
---crt-scanline-light: .02;
---crt-scanline-opacity: .9;
---crt-scanline-size: 2px;
+    --crt-scanline-dark: .18;
+    --crt-scanline-light: .02;
+    --crt-scanline-opacity: .9;
+    --crt-scanline-size: 2px;
 
---crt-beam-height: 140px;
---crt-beam-blur: 6px;
---crt-beam-speed: 9.5s;
---crt-beam-opacity: .6;
+    --crt-beam-height: 140px;
+    --crt-beam-blur: 6px;
+    --crt-beam-speed: 9.5s;
+    --crt-beam-opacity: .6;
 
---crt-ghost-opacity: .04;
---crt-ghost-blur: 2px;
+    --crt-ghost-opacity: .04;
+    --crt-ghost-blur: 2px;
 
---crt-overscan: -3px;
+    --crt-overscan: -3px;
 }
 
 /* PRESETS ============================================== */
