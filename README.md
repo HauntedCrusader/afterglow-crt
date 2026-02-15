@@ -43,7 +43,6 @@ The project is designed both as a **retro aesthetic library** and a **study of a
 ---
 <details>
 <summary>Ver em Português</summary>
-## Prévia
   
 O Afterglow pode ser usado para simular diferentes tipos de telas reais:
 
@@ -75,7 +74,6 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 ---
 <details>
 <summary>Ver em Português</summary>
-## Temas Incluídos
   
 | Tema   | Descrição                              |
 | ------- | ---------------------------------------- |
@@ -106,7 +104,6 @@ That's it. No build step, no dependencies (for now).
 ---
 <details>
 <summary>Ver em Português</summary>
-## Instalação
   
 Clone o repositório:
 
@@ -141,8 +138,6 @@ The goal is to mimic how an **electron beam scans phosphor lines** inside a real
 ---
 <details>
 <summary>Ver em Português</summary>
-
-## Como Funciona
 
 O Afterglow utiliza uma combinação de:
 
@@ -253,8 +248,6 @@ Inspirado na tecnologia de vídeo analógica e nas comunidades de preservação 
 
 ---
 </details>
-
-## License
 
 MIT License
 
