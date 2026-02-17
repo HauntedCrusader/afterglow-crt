@@ -1,6 +1,6 @@
 {
   "name": "afterglow-crt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A pure CSS CRT monitor visual effect with multiple presets (green, amber, office98, pvm).",
   "main": "crt.css",
   "author": "HauntedCrusader",
