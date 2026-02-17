@@ -112,7 +112,7 @@ import "afterglow-crt";
 Add the stylesheet directly to your page:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HauntedCrusader/afterglow-crt@v1.0.0/crt.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afterglow-crt/crt.css">
 ```
 
 
@@ -149,7 +149,7 @@ import "afterglow-crt";
 Adicione a folha de estilo diretamente à sua página:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HauntedCrusader/afterglow-crt@v1.0.0/crt.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afterglow-crt/crt.css">
 ```
 
 
