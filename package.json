@@ -1,0 +1,26 @@
+{
+  "name": "afterglow-crt",
+  "version": "1.0.0",
+  "description": "A pure CSS CRT monitor visual effect with multiple presets (green, amber, office98, pvm).",
+  "main": "crt.css",
+  "author": "HauntedCrusader",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HauntedCrusader/afterglow-crt.git"
+  },
+  "keywords": [
+    "css",
+    "crt",
+    "retro",
+    "monitor",
+    "terminal",
+    "scanlines",
+    "vintage",
+    "screen-effect"
+  ],
+  "style": "crt.css",
+  "files": [
+    "crt.css"
+  ]
+}

@@ -93,37 +93,74 @@ O projeto foi concebido tanto como uma **biblioteca estética retrô** quanto co
 
 ## Installation
 
-Clone the repository:
+### 1. NPM (recommended)
 
 ```bash
-https://github.com/HauntedCrusader/afterglow-crt.git
+npm install afterglow-crt
 ```
 
-Open:
+Import in your project:
 
-```
-index.html
+```js
+import "afterglow-crt";
 ```
 
-That's it. No build step, no dependencies (for now).
+
+
+### 2. CDN
+
+Add the stylesheet directly to your page:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HauntedCrusader/afterglow-crt@v1.0.0/crt.css">
+```
+
+
+
+### 3. Direct Download
+
+Download `crt.css` from the [GitHub Releases] page and include it:
+
+```html
+<link rel="stylesheet" href="crt.css">
+```
 
 
 <details>
 <summary>Ver em Português</summary>
 
-Clone o repositório:
+### 1. NPM (recomendado)
 
 ```bash
-https://github.com/HauntedCrusader/afterglow-crt.git
+npm install afterglow-crt
 ```
 
-Abra:
+Importe no seu projeto:
+
+```js
+import "afterglow-crt";
 
 ```
-index.html
+
+
+
+### 2. CDN
+
+Adicione a folha de estilo diretamente à sua página:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HauntedCrusader/afterglow-crt@v1.0.0/crt.css">
 ```
 
-Pronto. Sem etapa de compilação, sem dependências (por enquanto).
+
+
+### 3. Download direto
+
+Baixe o arquivo `crt.css` da página [GitHub Releases] e inclua-o:
+
+```html
+<link rel="stylesheet" href="crt.css">
+```
 
 
 </details>
